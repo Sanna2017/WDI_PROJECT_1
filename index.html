@@ -9,21 +9,27 @@
   crossorigin="anonymous"></script>
   <script src="js/app.js" type="text/javascript"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Josefin+Slab|Open+Sans+Condensed:300|Poiret+One" rel="stylesheet">
+
 </head>
 <body>
   <main>
-    <h1>Memory game</h1>
-    <button id="startGame" class= "start" type="button" name="button">Start game</button>
-    <button id= "yesButton" type="button" name="button">Yes</button>
-    <button id= "noButton" type="button" name="button">No</button>
-
+    <h1> MEMORY BLUES</h1>
+    <button id="startGame" class= "start" type="button" name="button">Start</button>
     <div class="images hidden"></div>
-    <div class="attempts">Attempts</div>
-    <div class="timer">Time left</div>
-    <div class="score">Score</div>
+    <div class="showMe hideOptions">
+      <p class="info">Are these shades of blue the same?</p>
+      <button id= "yesButton" class= "button" type="button" name="button">Yes</button>
+      <button id= "noButton" class= "button" type="button" name="button">No</button>
+    </div>
+
+    <div class="attempts">Attempts <span class= "attemptsMade"></span></div>
+    <div class="timer">Time left: <span class="timeLeft"></span></div>
+    <div class="score">Score <span class= "currentScore"></span></div>
     <h2 class="instructions">Instructions</h2>
     <p class= "instructions">How to play this game?</p>
-    <p class= "question">Was the last image the same as the previous one?</p>
+    <!-- <p class= "question">Was the last image the same as the previous one?</p> -->
+
   </main>
 </body>
 </html>
