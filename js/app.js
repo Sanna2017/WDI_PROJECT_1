@@ -11,12 +11,18 @@ let $buttonNo       = null;
 let $imageContainer = null;
 
 
+
 function init() {
   let gameOver     = false;
   $startGame       = $('#startGame');
   $buttonYes       = $('#yesButton');
   $buttonNo        = $('#noButton');
   $imageContainer  = $('.images');
+
+  var audio        = $('#audio');
+  
+
+
   addEventListeners();
 
   function addEventListeners() {
@@ -29,6 +35,9 @@ function init() {
     $startGame.addClass('hideOptions');
     pickRandomImages();
     startTimer();
+    this.audio = new Audio;
+    this.audio.src= 'sounds/wave.wav';
+    this.audio.play();
   }
 
   function pickRandomImages() {
@@ -79,18 +88,18 @@ function init() {
     $attempts += 1;
     if(randomImages[0] === randomImages[1]) {
       $score += 1;
+      audio.play();
     }
     updateDisplay();
     pickRandomImages();
   }
 
   function randomImagesComparisonNo() {
-
     $attempts += 1;
     if( randomImages[0] !== randomImages[1]) {
       $score += 1;
+      audio.play();
     }
-
     updateDisplay();
     pickRandomImages();
   }
@@ -106,6 +115,8 @@ function init() {
     let counter         = 0;
     let $score          = 0;
     let $attempts       = 0;
+    let timer           = 60;
+    audio.play();
   }
 
   function startTimer() {
