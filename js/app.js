@@ -20,7 +20,7 @@ function init() {
   $imageContainer  = $('.images');
 
   var audio        = $('#audio');
-  
+
 
 
   addEventListeners();
@@ -88,7 +88,7 @@ function init() {
     $attempts += 1;
     if(randomImages[0] === randomImages[1]) {
       $score += 1;
-      audio.play();
+      // audio.play();
     }
     updateDisplay();
     pickRandomImages();
@@ -96,9 +96,9 @@ function init() {
 
   function randomImagesComparisonNo() {
     $attempts += 1;
-    if( randomImages[0] !== randomImages[1]) {
+    if(randomImages[0] !== randomImages[1]) {
       $score += 1;
-      audio.play();
+      // audio.play();
     }
     updateDisplay();
     pickRandomImages();
