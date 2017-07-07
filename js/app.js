@@ -1,6 +1,7 @@
 $(init);
 
 let randomImages  = [];
+
 const imagesArray   =  ['image_1.png','image_2.png','image_3.png','image_4.png','image_5.png','image_6.png','image_7.png','image_8.png','image_9.png','image_10.png','image_1.png','image_12.png'];
 let counter         = 0;
 let $score          = 0;
@@ -27,8 +28,9 @@ function init() {
 
   function addEventListeners() {
     $startGame.on('click', startGame);
-    $buttonYes.on('click', randomImagesComparisonYes);
     $buttonNo.on('click', randomImagesComparisonNo);
+    $buttonYes.on('click', randomImagesComparisonYes);
+
   }
 
   function startGame() {
@@ -63,7 +65,7 @@ function init() {
         clearInterval(imagesInterval);
         counter = 0;
         showButtons();
-        randomImages = [];
+        // randomImages = [];
         console.log('>>>SCORE<<<');
         console.log($score);
       }
@@ -74,19 +76,12 @@ function init() {
   function showButtons() {
     $('.showMe').removeClass('hideOptions');
     $('.instructions').addClass('hideOptions');
-    // $buttonYes.css('display', 'block');
-    // $buttonNo.css('display', 'block');
   }
 
   function randomImagesComparisonYes() {
-    // if (gameOver === true) {
-    //   reset();
-    // } else {
-    //   // found this as a way of exiting
-    //   return;
-    // }
     $attempts += 1;
-    if(randomImages[0] === randomImages[1]) {
+    if(randomImages[0]  === randomImages[1]) {
+      console.log(randomImages[0] + 'INDEX 0');
       $score += 1;
       // audio.play();
     }
