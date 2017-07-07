@@ -105,25 +105,21 @@ function init() {
     // $('.score').text('You got ' + $score + ' right in ' + $attempts +'.');
   }
 
-  function reset() {
-    const randomImages  = [];
-    let counter         = 0;
-    let $score          = 0;
-    let $attempts       = 0;
-    let timer           = 60;
-    audio.play();
-  }
-
   function startTimer() {
-    let timer = 60;
+    let timer = 15;
     setInterval(function(){
-      timer -= 1;
+      timer--;
       $('.timeLeft').html(timer);
       if (timer === 0) {
-        // alert('You ran out of time!');
-        timer = 60;
-        $('.info').text('Would you like to play another game?');
-        gameOver = true;
+        alert('You ran out of time!');
+        const result = prompt('Play Again? (yes / no)');
+        if (result === 'yes') {
+          console.log('YES CHOSEN');
+          location.reload();
+        }else if (result === 'no') {
+          console.log('NO CHOSEN');
+          location.reload();
+        }
       }
     }, 1000);
   }
@@ -135,6 +131,3 @@ function init() {
 
 // this is an example for exiting the function
 // var result = prompt("OK?");
-// if (result === null) {
-//     return;
-// }
