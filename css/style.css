@@ -21,7 +21,7 @@ h1 {
   width: 50%;
   height: 15%;
   padding-top: 25px;
-  background: #8cfffb;
+  background: #b0feff;
   background-size: contain;
   /*background-size: cover;*/
   background-repeat: no-repeat;
@@ -58,12 +58,6 @@ h1 {
   display: inline-block!important;
 }
 
-.score {
-
-  /*padding: 20px 10px;*/
-  /*position: absolute;
-  float: left;*/
-}
 
 .start {
   font-family: 'Architects Daughter', cursive;
@@ -76,9 +70,6 @@ h1 {
   margin: 20px;
 }
 
-/*.instructions {
-  display: block;
-}*/
 
 
 p {
@@ -89,12 +80,7 @@ p {
   height: 50px;
 }
 
-/*.attempts {
-  font-size: 25px;
-  border-radius: 20%;
-  border: 5px solid #8cfffb;
 
-}*/
 
 .timer, .attempts, .score {
   font-family: 'Architects Daughter', cursive;
